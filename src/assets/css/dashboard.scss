@@ -1,0 +1,742 @@
+.MuiPaper-root.header-top{
+    background: $normal;
+    color: $black;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    &.no-shadow{
+        box-shadow: none;
+    }
+    &.color-white{
+        color: $white;
+    }
+
+}
+.dashboard-menu.MuiGrid-item.MuiGrid-grid-md-4{
+    width: 30%;
+    flex-basis: 30%;
+}
+.chat-wrap.MuiGrid-item.MuiGrid-grid-md-8{
+    width: 70%;
+    flex-basis: 70%;
+    max-width: 100%;
+}
+.dashboard-menu{
+    border-right: 1px solid #d9d9d9;
+}
+
+.MuiPaper-root.search-form,
+.search-form{
+    padding: 2px 4px;
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    font-size: 13px;
+    width: 100%;
+    input{
+        margin-left: 16px;
+        flex: 1;
+        font-size: 13px;
+    }
+    .MuiIconButton-root svg{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.MuiToolbar-regular.search-toolbar{
+    min-height: auto;
+    margin-top: 8px;
+}
+.MuiToolbar-regular.archive-toolbar{
+    min-height: auto;
+    .archive-title{
+        font-size: 14px;
+        margin: 0;
+    }
+    .archive-count{
+        margin-top: 4px;
+        margin-bottom: 4px;
+        vertical-align: middle;
+        color: #000;
+        svg{
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        span{
+            font-size: 17px;
+            line-height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .archive-count span{       
+    }
+}
+
+.main-menu{
+    position: relative;
+    height: 100%;
+    .new-btn{
+        position: absolute;
+        top: auto;
+        right: 30px;
+        bottom: 40px;
+        text-decoration: none;
+        z-index: 9;
+    }
+    .menu-overlay{  
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255,255,255,0.6);
+        z-index: 2;
+    }
+    .main-menu-inner{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 80px;
+        top: 50px;
+        overflow: auto;
+        z-index: 3;  
+        text-align: center;
+    }
+}
+
+.buttons-group{
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    a{
+        margin: 10px;
+    }
+}
+
+/* MODAL STYLES
+-------------------------------*/
+.dashboard-modal {
+    /* modal container fixed across whole screen */
+    position: absolute;
+    top: 60%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-50%);
+
+    /* z-index must be higher than .modal-background */
+    z-index: 1000;
+    
+    /* enables scrolling for tall modals */
+    overflow: auto;
+
+    .dashboard-modal-body {
+        padding: 20px;
+        background: #fff;
+
+        /* margin exposes part of the modal background */
+        margin: 40px;
+        border-top-right-radius: 75px;
+        border-bottom-left-radius: 75px;
+    }
+}
+
+.dashboard-modal-background  {
+    /* modal background fixed across whole screen */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* semi-transparent black  */
+    background-color: #000;
+    opacity: 0.75;
+    
+    /* z-index must be below .modal and above everything else  */
+    z-index: 900;
+}
+
+body.dashboard-modal-open #dashboard-wrap {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
+.model-content{
+    text-align: left;
+    h1{
+        font-size: 26px;
+        font-weight: bold;
+    }
+    p{
+        font-size: 18px;
+    }
+    .btn,.MuiButton-label{
+        font-size: 15px;
+        line-height: 100%;
+    }
+}
+
+.settingmenu-modal {
+    /* modal container fixed across whole screen */
+    position: absolute;
+    top: 0%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* z-index must be higher than .modal-background */
+    z-index: 1000;
+    
+    /* enables scrolling for tall modals */
+    overflow: auto;
+}
+.settingmenu-modal-background  {
+    /* modal background fixed across whole screen */
+    position: absolute;
+    top: 13%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* semi-transparent black  */
+    background-color: #fff;
+    opacity: 0.9;
+    
+    /* z-index must be below .modal and above everything else  */
+    z-index: 900;
+}
+
+.sidebar-wrap { 
+    height:100vh; 
+    overflow:hidden; 
+    display: flex; 
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    .sidebar-header{
+        flex: 1 1 50px;
+    }
+    .sidebar-content{
+        flex: 1 1 100%;
+        overflow-y:scroll;
+    }
+}
+.menu-contents-wrap{
+    // .menu-contents{
+    //     height: calc(100vh - 142px);
+    //     overflow-y: scroll;
+    // }
+    .menu-contents{
+        height: 90%;
+        box-shadow: none;
+        max-height: 100%;
+        padding-bottom: 70px;
+        padding-top: 10px;
+    }
+    position: relative;
+    
+}
+.dashboard-form{
+    padding: 50px 30px 0;
+    text-align: left;
+    position: relative;
+    label{
+        text-transform: uppercase;
+    }
+    input, 
+    textarea {
+        font-size: 20px;
+        line-height: 22px;
+        font-weight: 500;
+    }
+
+    .privacy-label{
+        margin:30px 0 20px;
+        color: $primary;
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+    .radio-buttons{
+        flex-direction: row;
+        .MuiFormControlLabel-root{
+            background: $gray;
+        }
+        .MuiFormControlLabel-root.active{
+            background: $orange;
+        }
+        .MuiFormControlLabel-root .MuiRadio-root{
+            display: none;
+            opacity: 0;
+        }
+        .MuiFormControlLabel-label{
+            font-size: 14px;
+            line-height: 14px;
+            padding: 0;
+            color: #fff;
+            text-transform: initial;
+        }
+    }
+    .form-bottom{
+        margin: 0;
+        text-align: center;
+        position: absolute;
+        bottom: 60px;
+        right: 0;
+        left: 0;
+
+        .btn .MuiButton-label{
+            color: #fff;
+        }
+    }
+}
+
+.summary-detail{
+    padding: 50px 30px 0;
+    .avatar-image-wrap{
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+    .funraise-avatar-image{
+        width :100%;
+        height: 100%;
+    }
+    .field-group{
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    label{
+        text-transform: uppercase;
+        color: $primary;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    p{
+        font-weight: 500;
+    }
+    .MuiTypography-body1 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .icon-file-add{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-size: 12px;
+        .MuiIconButton-root {
+            padding: 5px;
+            background: rgba(0,0,0,0.9);
+            color: #fff;
+            font-weight: 300;
+        }
+    }
+}
+.social-icons{
+    button{
+        margin-right: 15px;
+    }
+}
+.contributor-list{
+    .MuiListItem-root{
+        padding: 0;
+    }
+    .MuiListItemText-root{
+        margin: 0;
+    }
+    .MuiListItemAvatar-root{
+        min-width: 45px;
+        margin-top: 5px;
+    }
+    .MuiListItemText-primary {
+        
+        color: $primary;
+        font-size: 14px;
+        line-height: 100%;
+    }
+    .MuiListItemText-secondary{
+        span{
+            font-size: 23px;
+            line-height: 20px;
+            font-weight: 500;
+            letter-spacing: 0;
+        }
+    }
+}
+
+.selected-userlist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    li.MuiListItem-root{
+        width: 80px;
+    }
+    &.MuiList-root{
+        padding: 0 30px;
+    }
+    .MuiAvatar-root{
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .MuiTypography-root {
+        font-size: 12px;
+        line-height: 12px;
+        color:#000;
+    }
+}
+.closeIcon{
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 12px;
+        width: 12px;
+        height: 12px;
+        background: url('../images/icons/cross.svg');
+        z-index: 2;
+
+    }
+}
+.closeRedIcon{
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 12px;
+        width: 12px;
+        height: 12px;
+        background: url('../images/icons/red-cross.svg');
+        z-index: 2;
+
+    }
+}
+.userlist-wrap-inner{
+    padding-bottom: 50px;
+    .selected-userlist-next{
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+.createGroupForm {
+    .avatar-image-wrap {
+        text-align: center;
+    }
+    .icon-file-add {
+        border-radius: 50%;
+        background: rgba(0,0,0,0.2);
+        height: 90px;
+        width: 90px;
+        margin: 0 auto;
+        vertical-align: middle;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .icon-file-add .MuiButtonBase-root {
+        width: 40px;
+        padding: 30px;
+        background: $groupchat-bg;
+        color: $groupchat-color;
+        svg{
+            height: inherit;
+            width: inherit;
+        }
+    }
+    .MuiFormControl-root{
+        margin-top: 8px;
+        margin-bottom: 0;
+        .MuiFormControl-root{
+            margin: 0;
+        }
+    }
+    .MuiInputBase-input{
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+    }
+    .userlist-wrap-inner{
+        margin-top: 45px;
+    }
+    .btn-submit{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.menu-contents.chat-user-list {
+    padding-top: 0;
+    .MuiToolbar-regular.search-toolbar{
+        margin-top: 0;
+        padding-top: 8px;
+        background: #f6f6f6;
+    }
+    .MuiToolbar-regular.archive-toolbar{
+        background: #f6f6f6;
+        box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+}
+.userlist.chat-user-list{
+    padding:0;
+    margin: 0;
+    .MuiListItemText-primary{
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .MuiTypography-body2{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    li a{
+        position:relative;
+        display: flex;
+        width: 100%;
+        text-decoration: none;
+        color: inherit;
+    }
+    .MuiListItemSecondaryAction-root{
+        top: 15px;
+    }
+    .MuiListItemText-root{
+        margin-top: 0;
+        margin-bottom: 14px;
+    }
+    .group-more{
+        position:absolute;
+        right: 10px;
+        bottom: 5px;
+    }
+}
+.setting-menu{
+    display: flex;
+}
+.detailsTitle{
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+}
+.DetailsOpen .Messages-list {
+    padding-left: 25px;
+    padding-right: 25px;
+    ul{
+        padding-left: 0;
+    }
+}
+.chatdetails-main.groupchatDetails-main svg{
+    display: initial;
+}
+.chatdetails-main.groupchatDetails-main{
+    padding: 24px 0;
+    .MuiInputLabel-root,
+    .MuiFormLabel-root{
+        text-transform: uppercase;
+        color: $primary;
+        font-size: 22px;
+        &.bill-data{
+            color: inherit;
+        }
+    }
+    
+    .MuiButton-text{
+        .MuiButton-label,
+        .MuiButton-label .media-link{
+            font-size: 16px;
+        }
+        color: $primary;
+        svg{
+            color: $orange;
+        }
+        &.color-black{
+            color: $black;
+        }
+        
+    }
+    .MuiFormLabel-root:not(.MuiInputLabel-shrink){
+        font-size: 16px;
+    }
+    .MuiAvatar-root.avatar-img{
+        margin: auto;
+    }
+    .spacing-lr{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .media-link-button{
+        margin-bottom: 10px;
+    }
+    .media-count{
+        display:block;
+        color: #000;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: left;
+    }
+    input,.switch_field .MuiIconButton-label{
+        color: #000;
+        font-size: 23px;
+        line-height: 24px;
+    }
+    .add-new-member input{
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+.MuiFormControlLabel-labelPlacementStart.switch_field{
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 0;
+    
+}
+.chatdetails-main.groupchatDetails-main .bill-data-link.MuiButton-text{
+    color: inherit;
+    text-transform: initial;
+    margin-top: 10px;
+    .bill-desc{
+        padding: 0 15px;
+    }
+}
+.groupchatDetails-main {
+    .MuiButton-text{
+        color: inherit;
+        &.color-white{
+            color: #fff;
+        }
+        &.bg-red,&.bg-red:hover,&.bg-red:focus{
+            background: #FC0005;
+        }
+    }
+    .bill-data {
+        padding-bottom: 5px;
+        color: inherit;
+        text-align: left;
+        .bill-desc{
+            h4,h4 span{
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 18px;
+            }
+            h4 span{
+                font-weight: bold;
+            }
+            p{
+                font-weight: normal;
+                font-size: 14px;
+                span{
+                    font-weight: inherit;
+                    font-size: inherit;
+                    display: block;
+                }
+            }
+        }
+    }
+    .members-list{
+        .MuiButton-root{
+            text-transform: none;
+        }
+        .MuiButton-label{
+            font-weight: bold;
+        }
+        .avatar{
+            margin-right: 10px;
+        }
+        .designation{
+            font-size: 12px;
+        }
+    }
+    .leave-group-btn{
+        margin: 20px 0;
+    }
+    .change_name .MuiSvgIcon-root{
+        width: 22px;
+    }
+}
+.control-with-button{
+    display: flex;
+    align-items: center;
+}
+.add-new-member{
+    display: flex;
+    align-items: center;
+    .MuiIconButton-root{
+        color: $white;
+        background: $secondary;
+        .MuiSvgIcon-root{
+            width : 20px;
+            height: 20px;
+        }
+    }
+}
+.MuiAppBar-root.no-shadow{
+    box-shadow: none;
+}
+.tabBox{
+    padding: 15px 0;
+}
+.details-tab{
+    border-radius: 24px;
+    box-shadow: none;
+    .MuiTabs-indicator{
+        display: none;
+    }
+    .MuiTabs-flexContainer .MuiTab-root:first-child {
+        border-top-left-radius: 24px;
+        border-bottom-left-radius: 24px;
+    }
+    .MuiTabs-flexContainer .MuiTab-root:last-child {
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+    }
+    .MuiTabs-root{
+        min-height: auto;
+    }
+    .MuiTab-root{
+        border:none;
+        min-width: 90px;
+        min-height: auto;
+        text-transform: none;
+        color: #000;
+        border:  1px solid rgba(48,127,226,0.29);
+        .MuiTab-wrapper{
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &.Mui-selected{
+            background: #5B95DD;
+            color: #fff;
+        }
+    }
+    
+}
+.bill-details-wrap{
+    text-align: center;
+    padding: 20px 0;
+    .payment{
+        padding: 20px 0;
+    }
+    label{
+        font-size: 17px;
+    }
+    h4{
+        font-size: 36px;
+    }
+    h6{
+        &,span{
+            font-size: 20px;
+        }
+        line-height: 100%;
+        font-weight: normal;
+    }
+}
+
+.MuiListItem-container .MuiTypography-subtitle2 {
+    font-size: 20px;
+    margin-left: 10px;
+}

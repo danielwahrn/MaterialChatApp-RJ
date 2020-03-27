@@ -1,0 +1,15 @@
+<svg id="Ôèãóðà_12_êîïèÿ_2" data-name="Ôèãóðà 12 (êîïèÿ) 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.694" height="25.584" viewBox="0 0 28.694 25.584">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.055" y1="1" x2="0.945" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fcb13e"/>
+      <stop offset="1" stop-color="#fed174"/>
+    </linearGradient>
+  </defs>
+  <path id="Path_2185" data-name="Path 2185" class="cls-1" d="M91.307,216.29H82.279v4.7h9.028Zm0-15.512H84.972a2.693,2.693,0,0,0-2.693,2.693v1.29h9.028ZM82.279,223.67a2.693,2.693,0,0,0,2.693,2.693h23.307a2.693,2.693,0,0,0,2.693-2.693v-2.342H82.279ZM91.307,205.1H82.279v5.213h9.028Zm0,5.555H82.279v5.289h9.028Zm10.122-9.881h-9.78v20.207h9.78V210.317h9.544V205.1h-9.544Zm.342,20.207h9.2v-4.7h-9.2Zm6.508-20.207h-6.508v3.984h9.2v-1.29A2.693,2.693,0,0,0,108.279,200.778Zm-6.508,15.17h9.2v-5.289h-9.2Z" transform="translate(-82.279 -200.778)"/>
+</svg>

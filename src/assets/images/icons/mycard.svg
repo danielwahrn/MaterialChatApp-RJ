@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34.114" height="29" viewBox="0 0 34.114 29">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ccc;
+      }
+    </style>
+  </defs>
+  <g id="Icon_ionic-ios-wallet" data-name="Icon ionic-ios-wallet" transform="translate(-3.375 -4.499)">
+    <path id="Path_1039" data-name="Path 1039" class="cls-1" d="M32.568,11.25H8.3a4.741,4.741,0,0,0-4.92,4.531V28.468A4.741,4.741,0,0,0,8.3,33H32.568a4.741,4.741,0,0,0,4.92-4.531V15.781A4.741,4.741,0,0,0,32.568,11.25Z" transform="translate(0 0.5)"/>
+    <path id="Path_1040" data-name="Path 1040" class="cls-1" d="M25.562,4.576,7.823,8.042c-1.359.3-3.323,1.669-3.323,3.33A4.758,4.758,0,0,1,8.2,9.937H29.874V8.389a4.336,4.336,0,0,0-1.05-2.839h0A3.571,3.571,0,0,0,25.562,4.576Z" transform="translate(0.083 0)"/>
+  </g>
+</svg>

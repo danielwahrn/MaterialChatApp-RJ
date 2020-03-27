@@ -1,0 +1,144 @@
+@font-face {
+	font-family: 'Open-Sans';
+	src: url('../fonts/Open-Sans-Bold.eot');
+	src:url('../fonts/Open-Sans-Bold.woff') format('woff'), url('../fonts/Open-Sans-Bold.ttf') format('truetype'), url('../fonts/Open-Sans-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Open-Sans';
+	src: url('../fonts/Open-Sans-SemiBold.eot');
+	src:url('../fonts/Open-Sans-SemiBold.woff') format('woff'), url('../fonts/Open-Sans-SemiBold.ttf') format('truetype'), url('../fonts/Open-Sans-SemiBold.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Open-Sans';
+	src: url('../fonts/Open-Sans-Regular.eot');
+	src:url('../fonts/Open-Sans-Regular.woff') format('woff'), url('../fonts/Open-Sans-Regular.ttf') format('truetype'), url('../fonts/Open-Sans-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+    position: relative;
+}
+html, body , body *,p, input{
+    font-family: 'Open-Sans' !important;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+body, p{
+    font-size: 23px;
+    line-height: 28px;
+}
+
+/** scroll bar */
+body *::-webkit-scrollbar {
+    width: 6px;
+}
+body *::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+body *::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.menu-contents-wrap .menu-contents.userslist-wrap{
+    padding-bottom: 0;
+}
+.userlist{
+    height : 93%;
+    // flex: 1;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $light-gray;
+        border-left: 4px solid white;
+        border-right: 4px solid white;
+    }
+}
+
+/** colors */
+.MuiTypography-root.color-red,
+.color-red{
+    color:$danger;
+}
+.color-orange{
+    color:$orange !important;
+}
+.color-black{
+    color: $black;
+}
+.header-top.color-white,
+.btn.color-white,
+.color-white {
+    color: #ffffff;
+}
+.color-blue {
+    color: #0047bb;
+}
+
+/** backgrounds */
+.bg-white{
+    background: #fff;
+}
+.bg-green{
+    background: #44d62c;
+}
+.MuiAppBar-root.header-top.bg-red-orange,
+.bg-red-orange{
+    background: #f04100;
+}
+.MuiPaper-root.bg-gray{
+    background: $gray-light;
+}
+
+/** text appearence */
+.uppercase{
+    text-transform: uppercase;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+.lowercase{
+    text-transform: lowercase;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+
+
+.mr-auto{
+    margin-right: auto;
+}
+.ml-auto{
+    margin-left: auto;
+}
+
+.flex1{
+    flex: 1;
+}
+.plr-30{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+img{
+    max-width: 100%;
+}
+
+.MuiButtonBase-root.rounded-radius,
+.rounded-radius{
+    border-radius: 25px;
+}
